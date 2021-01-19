@@ -1,0 +1,10 @@
+#!/bin/bash
+
+let x=60;
+while (( x!=0 ));
+do
+  echo "$x";
+  sleep 1;
+  clear;
+  let x--
+done
