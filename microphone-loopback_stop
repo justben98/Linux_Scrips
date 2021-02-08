@@ -1,0 +1,6 @@
+#!/bin/bash
+
+#unload microphone loopback module
+pactl unload-module module-loopback
+
+#E.O.F

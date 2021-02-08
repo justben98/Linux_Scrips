@@ -1,0 +1,5 @@
+#!/bin/bash
+#Load module-loopback with a latency of 1 msec
+pactl load-module module-loopback latency_msec=1
+
+#E.O.F
