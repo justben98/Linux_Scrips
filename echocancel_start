@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+#Load module
+pactl load-module module-echo-cancel
+
+#E.O.F
