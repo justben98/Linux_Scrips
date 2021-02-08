@@ -1,0 +1,47 @@
+#!/bin/bash 
+
+# unzip and open archived file
+
+file=$1
+app=$2
+
+if [[ $file != '' || $app != '' ]]; then
+
+	[[ -d $HOME/tmpar ]] || mkdir $HOME/tmpar
+
+	EXIT_ON_SIGNAL_SIGINT () {
+		rm -r $HOME/tmpar
+		exit 0
+	}
+
+	EXIT_ON_SIGNAL_SIGTERM () {
+		rm -r $HOME/tmpar
+		exit 0
+	}
+
+	function_unzip () {
+		unzip -n $file -d $HOME/tmpar
+		return 0
+	}
+
+	EXIT_SUCCESS () {
+
+		rm -r $HOME/tmpar
+		exit 0	
+	}
+
+	trap EXIT_ON_SIGNAL_SIGINT SIGINT
+	trap EXIT_ON_SIGNAL_SIGTERM SIGTERM
+
+	if [[ -d $HOME/tmpar ]]; then 
+		function_unzip
+		$app $HOME/tmpar/*
+		EXIT_SUCCESS
+	fi
+
+else
+	echo 'Too few parameters.
+	Syntax: zopen [file] [app to open the file].
+	Exiting...'
+	exit 1 
+fi		
