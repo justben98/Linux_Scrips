@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=/bin/bash /usr/local/bin/synergysauto
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=Synergys
+X-GNOME-Autostart-Delay=3
+Comment=Starts Synergy Sever
