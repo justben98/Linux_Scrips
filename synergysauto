@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# use the following defined address and configuration file.
+# The option --daemon runs the process in the background
+# Use Hp as the server name instead of the hostname
+# Execute
+synergys --address 10.42.0.1:45000 --name Hp --config /etc/synergy.conf --daemon
+
+# Exit status
+exit 0
