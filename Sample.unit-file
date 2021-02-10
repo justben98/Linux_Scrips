@@ -1,0 +1,9 @@
+[Unit]
+Description=autostart something
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/blah
+
+[Install]
+WantedBy=multi-user.target

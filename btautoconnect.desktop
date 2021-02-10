@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=/bin/bash /home/justech/bin/btautoconnect.sh
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=BTAutoConnect
+X-GNOME-Autostart-Delay=3
+Comment=Starts Bluetooth speaker
